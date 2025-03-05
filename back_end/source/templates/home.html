@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Portfolio{% endblock %}
+
+{% block content %}
+<!-- Banner Section -->
+<section id="banner">
+  <h1>Welcome, I'm Rockson</h1>
+  <p>
+    Experienced frontend developer specializing in JavaScript delivering exceptional user experiences.
+    Let's collaborate on your next digital venture.
+  </p>
+  <a href="{% url 'contact' %}" class="btn">Contact Me</a>
+  <a href="{% url 'projects' %}" class="btn">View My Work</a>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+  <h2>Skills & Tools</h2>
+  <p>These are the things I love working with as a web developer.</p>
+  <div class="skill-cards">
+    {% for card in skill_cards %}
+      <div class="card">
+        <h3>{{ card.title }}</h3>
+        <ul>
+          {% for skill in card.skills.all %}
+            <li>{{ skill.name }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Work Experience Section -->
+<section id="work-experience">
+  <h2>Work Experience</h2>
+  {% for work in work_experiences %}
+    <div class="work-item">
+      <h3>{{ work.title }}</h3>
+      <p>
+        {{ work.subtitle }} | {{ work.start_date }} - {% if work.end_date %}{{ work.end_date }}{% else %}Present{% endif %}
+      </p>
+      <p>{{ work.description }}</p>
+    </div>
+  {% endfor %}
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  {% for project in projects %}
+    <div class="project-card">
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.short_desc }}</p>
+      <a href="{% url 'project_detail' project.slug %}">Read More</a>
+    </div>
+  {% endfor %}
+</section>
+
+
+{% endblock %}

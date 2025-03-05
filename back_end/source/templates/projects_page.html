@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects - Portfolio{% endblock %}
+
+{% block content %}
+<section id="projects-list">
+  <h2>Projects</h2>
+  <p>I made these in my spare time for learning purposes or experimentation.</p>
+  <div class="project-list">
+    {% for project in projects %}
+      <div class="project-card">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.short_desc }}</p>
+        <a href="{% url 'project_detail' project.slug %}">Read More</a>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
