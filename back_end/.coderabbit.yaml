@@ -1,0 +1,5 @@
+# .coderabbit.yaml
+review:
+  enabled: true
+  exclude_files: ["*.md", "docs/**"]  # Exclude non-code files
+  severity: warning  # Set feedback severity (info, warning, error)
