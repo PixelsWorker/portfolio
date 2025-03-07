@@ -1,5 +1,10 @@
 # .coderabbit.yaml
-review:
+reviews:
   enabled: true
-  exclude_files: ["*.md", "docs/**"]  # Exclude non-code files
-  severity: warning  # Set feedback severity (info, warning, error)
+  # Enable reviews on all branches (or specify specific branches)
+  branches:
+    include: ["**"]  # All branches
+    # OR specify branches:
+    # include: ["feature/*", "bugfix/*"]
+  # Optional: Disable the status message (if desired)
+  review_status: false
