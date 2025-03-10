@@ -10,7 +10,7 @@
       <div class="hidden md:flex items-center space-x-6">
         <ul class="flex space-x-6">
           <li>
-            <a href="#about" class="hover:text-gray-300">About</a>
+            <router-link to="/about" class="hover:text-gray-300">About</router-link>
           </li>
           <li>
             <a href="#projects" class="hover:text-gray-300">Projects</a>
@@ -58,7 +58,7 @@
             <MenuItems class="absolute right-0 mt-2 w-48 origin-top-right bg-black shadow-lg ring-1 ring-white ring-opacity-5 divide-y divide-gray-700 rounded-md">
               <div class="py-1">
                 <MenuItem v-slot="{ active }">
-                  <a href="#about" :class="[active ? 'bg-gray-700' : '', 'block px-4 py-2 text-white']">About</a>
+                  <router-link to="/about" :class="[active ? 'bg-gray-700' : '', 'block px-4 py-2 text-white']">About</router-link>
                 </MenuItem>
                 <MenuItem v-slot="{ active }">
                   <a href="#projects" :class="[active ? 'bg-gray-700' : '', 'block px-4 py-2 text-white']">Projects</a>
