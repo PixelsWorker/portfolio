@@ -9,7 +9,7 @@
     </p>
     </section>
     
-  <footer class="bg-black text-white py-6 mt-10">
+  <footer class="text-white py-6 mt-10">
     <div class="container mx-auto text-center">
       <div class="mb-4">
         <img src="../assets/logo.png" alt="Logo" class="h-12 mx-auto" />
