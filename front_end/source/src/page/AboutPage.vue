@@ -1,13 +1,11 @@
 <template>
     <section class="bg-[#111827] min-h-screen flex flex-col">
-      <!-- Navigation Modal -->
-      <NevModal />
-  
+
       <!-- Main Content -->
       <div class="container mx-auto flex-grow p-8 text-center">
         <!-- Personal Image -->
         <img
-          src="./assets/ProjectManagement.jpg"
+          src="../assets/ProjectManagement.jpg"
           alt="My Photo"
           class="w-48 h-48 rounded-full mx-auto mb-6 object-cover border-4 border-gray-600"
         />
@@ -29,15 +27,9 @@
   </template>
   
   <script>
-  import NevModal from "./components/Nev.vue";
-  import FooterModal from "./components/Footer.vue";
   
   export default {
     name: "AboutPage",
-    components: {
-      NevModal,
-      FooterModal,
-    },
   };
   </script>
 
