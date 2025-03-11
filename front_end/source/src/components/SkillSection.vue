@@ -1,5 +1,5 @@
 <template>
-    <section class="skill-section p-8 bg-gray-950">
+    <section class="skill-section p-8 ">
     <!-- Section Header -->
       <div class="text-center mb-12">
         <h2 class="text-4xl font-bold text-white">Skills &amp; Tools</h2>
