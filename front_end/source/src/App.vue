@@ -1,16 +1,18 @@
 <template>
-  <div class="min-h-screen text-gray-100 backgrund-qw">
-    <NevModal />
-    <br>
-    <br>
-    <router-view />
-    <br>
-    <br>
-    <FooterModal />
+  <div class="min-h-screen flex flex-col">
+    <Nev />
+    <main class="flex-grow">
+      <router-view />
+    </main>
+    <Footer />
   </div>
 </template>
 
 <script setup>
-import NevModal from './components/Nev.vue'
-import FooterModal from './components/Footer.vue'
+import Nev from './components/Nev.vue';
+import Footer from './components/Footer.vue';
 </script>
+
+<style>
+/* Global styles or component-specific styles if needed */
+</style>

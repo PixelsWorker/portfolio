@@ -3,7 +3,7 @@
     <div class="container mx-auto flex justify-between items-center px-4">
       <!-- Logo -->
       <div>
-        <img src="../assets/logo.png" alt="Logo" class="h-10" />
+        <img src="../assets/logo.png" alt="Logo" class="h-10 md:h-12" />
       </div>
       
       <!-- Desktop Navigation & Resume (visible on md and up) -->
@@ -13,10 +13,10 @@
             <router-link to="/about" class="hover:text-gray-300">About</router-link>
           </li>
           <li>
-            <a href="#projects" class="hover:text-gray-300">Projects</a>
+            <router-link to="/projects" class="hover:text-gray-300">Projects</router-link>
           </li>
           <li>
-            <a href="#contact" class="hover:text-gray-300">Contact</a>
+            <router-link to="/contact" class="hover:text-gray-300">Contact</router-link>
           </li>
         </ul>
         <a
@@ -67,25 +67,25 @@
                     About
                   </router-link>
                 </MenuItem>
-
+  
                 <MenuItem v-slot="{ active }">
-                  <a 
-                    href="#projects" 
+                  <router-link 
+                    to="/projects" 
                     :class="[active ? 'bg-gray-700' : '', 'block px-4 py-2 text-white']"
                   >
                     Projects
-                  </a>
+                  </router-link>
                 </MenuItem>
-
+  
                 <MenuItem v-slot="{ active }">
-                  <a 
-                    href="#contact" 
+                  <router-link 
+                    to="/contact" 
                     :class="[active ? 'bg-gray-700' : '', 'block px-4 py-2 text-white']"
                   >
                     Contact
-                  </a>
+                  </router-link>
                 </MenuItem>
-
+  
                 <MenuItem v-slot="{ active }">
                   <a 
                     href="https://docs.google.com/document/d/YOUR_DOCUMENT_ID/view"

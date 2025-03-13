@@ -1,20 +1,22 @@
 <template>
-  <section id="projects" class="projects-section p-8 bg-gradient-dark">
+  <section id="projects" class="projects-section p-6 md:p-8 bg-gradient-dark">
     <!-- Section Header -->
-    <div class="text-center mb-12 animate-fade-in">
-      <h2 class="section-heading">Projects</h2>
-      <p class="mt-4 text-lg text-white">
+    <div class="text-center mb-8 md:mb-12">
+      <br>
+      <br>
+      <br>
+      <h2 class="text-3xl md:text-4xl font-bold text-white">Projects</h2>
+      <p class="mt-4 text-base md:text-lg text-white max-w-xl mx-auto">
         I made these in my spare time for learning purposes or experimentation.
       </p>
     </div>
 
     <!-- Projects List -->
-    <div class="projects-list grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div class="projects-list grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       <div
         v-for="(project, i) in projects"
         :key="project.id"
-        class="hover-card bg-gray-900 p-6 rounded-lg stagger-item"
-        :class="'stagger-delay-' + ((i % 5) + 1)"
+        class="hover-card bg-gray-900 p-4 md:p-6 rounded-lg transition-transform transform hover:-translate-y-1 hover:shadow-2xl"
       >
         <!-- Project Image -->
         <img
@@ -24,12 +26,12 @@
         />
 
         <!-- Project Title -->
-        <h3 class="text-xl font-bold text-white mb-3">{{ project.title }}</h3>
+        <h3 class="text-xl font-bold text-white mb-2">{{ project.title }}</h3>
 
         <!-- Skills & Tech List -->
-        <div class="project-skills mb-3">
-          <h4 class="font-semibold text-white mb-2">Skills &amp; Tech:</h4>
-          <ul class="flex flex-wrap gap-2">
+        <div class="project-skills mb-2">
+          <h4 class="font-semibold text-white mb-1">Skills &amp; Tech:</h4>
+          <ul class="flex flex-wrap gap-2 justify-center md:justify-start">
             <li
               v-for="(skill, index) in project.skills"
               :key="'skill-' + index"
@@ -48,14 +50,16 @@
         </div>
 
         <!-- Project Short Description -->
-        <p class="text-gray-300 mt-3">
+        <p class="text-gray-300 text-sm md:text-base mt-2">
           {{ project.shortDescription }}
         </p>
         
         <!-- Links -->
-        <div class="mt-4 flex space-x-4">
-          <a href="#" class="primary-button">View Project</a>
-          <a href="#" class="text-gray-400 hover:text-white">
+        <div class="mt-4 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 items-center justify-center">
+          <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded">
+            View Project
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white flex items-center">
             <font-awesome-icon :icon="['fab', 'github']" class="mr-1" /> Code
           </a>
         </div>
